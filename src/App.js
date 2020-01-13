@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Header from "./Components/Header";
+// import Action from "./Components/Action";
+import Options from "./Components/Options";
+import AddOption from "./Components/AddOption";
 
 function App() {
+  const title = "Indecision";
+  const subtitle = "Put your life in the hands of the machinez";
+  const options = [];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header title={title} subtitle={subtitle} />
+      <Options options={options} />
+      {/* <Action hasOptions={options.length} /> */}
+
+      <AddOption />
     </div>
   );
 }
